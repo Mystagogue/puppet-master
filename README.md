@@ -19,7 +19,7 @@ The app has a big red button. When you click this button it searches your comput
   <img src="./images/chromeIcons.png" alt="Multiple Chrome Icons" width="200px"/>
 </p>
 
-But theres more... There is a fully featured file system and a code editor. Any **puppeteer** automation code you write in the code editor can be executed on any of the new browsers you have created. There is no need to launch the browser as this is done for you (when you clicked the big red button) and user input code is wrapped in an _async_ function so you can use the _await_ keyword immediately. This really takes the hassle out of writing automations. Unlike regular test automation software you can keep using the browser as a regular manually surfing browser while doing this. Run as many scripts on a browser as you like, the scripts retain no memory of each other, only the browser persists! _Need to test something on the 3rd step of a multi-step form?_ Run an automation to get you there then keep going manually. You can run a whole file at a time, or just the currently selected code or you can even run whatever you have copied to your clipboard. Great if you want to test one line at a time, **the browser won't crash if the code fails**, the app will just give you a debug message and the browser will keep running so you can keep using it.
+But theres more... There is a fully featured file system and a code editor. Any [puppeteer](https://pptr.dev/) automation code you write in the code editor can be executed on any of the new browsers you have created. There is no need to launch the browser as this is done for you (when you clicked the big red button) and user input code is wrapped in an _async_ function so you can use the _await_ keyword immediately. This really takes the hassle out of writing automations. Unlike regular test automation software you can keep using the browser as a regular manually surfing browser while doing this. Run as many scripts on a browser as you like, the scripts retain no memory of each other, only the browser persists! _Need to test something on the 3rd step of a multi-step form?_ Run an automation to get you there then keep going manually. You can run a whole file at a time, or just the currently selected code or you can even run whatever you have copied to your clipboard. Great if you want to test one line at a time, **the browser won't crash if the code fails**, the app will just give you a debug message and the browser will keep running so you can keep using it.
 
 <p align="center">
   <img src="./images/debug2.png" alt="Multiple Browsers" width="700px"/>
@@ -31,7 +31,7 @@ Theres even more... you can open any file you like to store your code, its just 
 
 Whats in global scope? The app starts a browser for you. It creates the following global variables for you:
 
-- browser (the current puppeteer browser instance)
+- browser (the current [puppeteer](https://pptr.dev/) browser instance)
 - page (the first page of the current browser, browser.pages()[0])
 - log (a POJO, you can log any data to this that you want)
 
