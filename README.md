@@ -35,7 +35,7 @@ Whats in global scope? The app starts a browser for you. It creates the followin
 - page (the first page of the current browser, browser.pages()[0])
 - log (a POJO, you can log any data to this that you want)
 
-These are the standard puppeteer objects. The page object has all the associated puppeteer methods, as does the browser. The log object is a plain old Javascript object (POJO). You can simply add any data to it you like.
+These are the standard [puppeteer](https://pptr.dev/) objects. The page object has all the associated puppeteer methods, as does the browser. The log object is a plain old Javascript object (POJO). You can simply add any data to it you like.
 
 i.e log.message = "hello world!"
 
