@@ -29,6 +29,22 @@ Theres even more... you can open any file you like to store your code, its just 
 
 // Add screenshot of require
 
+Whats in global scope? The app starts a browser for you. It creates the following global variables for you:
+
+- browser (the current puppeteer browser instance)
+- page (the first page of the current browser, browser.pages()[0])
+- log (a POJO, you can log any data to this that you want)
+
+These are the standard puppeteer objects. The page object has all the associated puppeteer methods, as does the browser. The log object is a plain old Javascript object (POJO). You can simply add any data to it you like.
+
+i.e log.message = "hello world!"
+
+For example when I use the code to log into a website, I use node mudules to reach out to the database and get the associated user record, then I log the data of that record to the log!
+
+The log can be read inside the output window. The output window can be activated by clicking the icon in the side nave menu. You can drag the edge to make it larger or smaller (the same is true for any section fo the app).
+
+// Add screenshot of output window
+
 There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension _.env.js will become an environment variable file and any file you name with _.preload.js will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
 
 // Add screenshot of settings panel
