@@ -9,7 +9,7 @@ Puppet Master combines browser automation with regular surfing! You can **use** 
   <img src="./images/firstScreen.png" alt="Puppet Master Interface" width="1000px"/>
 </p>
 
-The app has a big red button. When you click this button it searches your computer for the first install of Chrome it can find, then it spawns an entirely **new** instance of Chrome. One that is brand new and has _no_ profile, _no_ history, _no_ cookies, _no_ cache, _no_ storage, _no_ prior memory of anything at all! If you click the button multiple times you will get **multiple** instances of Chrome, all of which are in complete **context isolation** from one another! This means you can sign into the same site with mutliple different users at the same time! The app connects to each instance via websocket and shows you a preview of its screen which updates automatically. When you close these instances, they are gone forever - no need to refresh browser cache again, just close the browser and start a new instance!
+The app has a big red button. When you click this button it searches your computer for the first install of Chrome it can find, then it spawns an entirely **new** instance of Chrome. One that is brand new and has _no_ profile, _no_ history, _no_ cookies, _no_ cache, _no_ storage, _no_ prior memory of anything at all! If you click the button multiple times you will get **multiple** instances of Chrome, not just new windows new **instances** of the app, all of which are in complete **context isolation** from one another! This means you can sign into the same site with mutliple different users at the same time! The app connects to each instance via websocket and shows you a preview of its screen which updates automatically. When you close these instances, they are gone forever - no need to refresh browser cache again, just close the browser and start a new instance!
 
 <p align="center">
   <img src="./images/secondScreen.png" alt="Multiple Browsers" width="1000px"/>
@@ -24,6 +24,16 @@ But theres more... There is a fully featured file system and a code editor. Any 
 <p align="center">
   <img src="./images/debug2.png" alt="Multiple Browsers" width="700px"/>
 </p>
+
+Theres even more... you can open any file you like to store your code, its just a regular file system like a code editor. Importantly you can run **npm init** on the directory and add node modules. Then when you use **require()** in the input code it will look inside the node_modules folder at the top level of the directory you opened! This code is running in a virtual machine inside a node child process so you have access to all the standard node modules as well as any modules you install. The file navigator hides the node_modules directory but it will show you the package.json. Do this with as many directories as you like to organise stuff. You have the full breadth of node packages at your disposal. You even have access to the file system - scrape a bunch of data from the web and save it to a file! Save it in the directory you have open and you will see it appear and you can view it in the code editor!
+
+// Add screenshot of require
+
+There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension _.env.js will become an environment variable file and any file you name with _.preload.js will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
+
+// Add screenshot of settings panel
+
+When the user input code is executed what happens is first the environment variables are executed, then each preload script in turn, then the current code file (or selected code) inside an async wrapper. The input code will then have access to everything added to scope in the environment and preload scripts. You can use these to create simplified methods for your input code. For example have a websiteX.preload.js and add a loginToWebsteX method. Then when writing other scripts you have a one line method to use. This way even non technical assets can read and use your code (when I say assets here I mean other human beings ar your company! The project managers, the QA's etc).
 
 Theres even more... There are environment variables and preload scripts that allow you to create complex wrapper methods for your automation script meaning it is even easier and faster and more convenient to write. Since this app has an integrated file system you can store your automation code in multiple files, perhaps corresponding to each of your projects and have different environment variables and preload scripts for each.
 
