@@ -31,9 +31,13 @@ This really takes the hassle out of writing automations. Unlike regular test aut
 
 Theres even more... you can open any file you like to store your code, its just a regular file system like a code editor. Importantly you can run **npm init** on the directory and add node modules. Then when you use **require()** in the input code it will look inside the node_modules folder at the top level of the directory you opened! This code is running in a virtual machine inside a node child process so you have access to all the standard node modules as well as any modules you install. The file navigator hides the node_modules directory but it will show you the package.json. Do this with as many directories as you like to organise stuff. You have the full breadth of node packages at your disposal. You even have access to the file system - scrape a bunch of data from the web and save it to a file! Save it in the directory you have open and you will see it appear and you can view it in the code editor!
 
-// Add screenshot of require
+Add an SQL library, query the database for whatever user the code is logging in as an add that data to the _log_ object to show it in the output window.
 
-Whats in global scope? The app starts a browser for you. It creates the following global variables for you:
+<p align="center">
+  <img src="./images/fetchImage.png" alt="Multiple Browsers" width="700px"/>
+</p>
+
+<!-- Whats in global scope? The app starts a browser for you. It creates the following global variables for you:
 
 - browser (the current [puppeteer](https://pptr.dev/) browser instance)
 - page (the first page of the current browser, browser.pages()[0])
@@ -45,22 +49,22 @@ i.e log.message = "hello world!"
 
 For example when I use the code to log into a website, I use node mudules to reach out to the database and get the associated user record, then I log the data of that record to the log!
 
-The log can be read inside the output window. The output window can be activated by clicking the icon in the side nave menu. You can drag the edge to make it larger or smaller (the same is true for any section fo the app).
-
-// Add screenshot of output window
+The log can be read inside the output window. The output window can be activated by clicking the icon in the side nave menu. You can drag the edge to make it larger or smaller (the same is true for any section fo the app). -->
 
 There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension _.env.js will become an environment variable file and any file you name with _.preload.js will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
 
-// Add screenshot of settings panel
+<p align="center">
+  <img src="./images/settingsPage.png" alt="Multiple Browsers" width="700px"/>
+</p>
 
 When the user input code is executed what happens is first the environment variables are executed, then each preload script in turn, then the current code file (or selected code) inside an async wrapper. The input code will then have access to everything added to scope in the environment and preload scripts. You can use these to create simplified methods for your input code. For example have a websiteX.preload.js and add a loginToWebsteX method. Then when writing other scripts you have a one line method to use. This way even non technical assets can read and use your code (when I say assets here I mean other human beings ar your company! The project managers, the QA's etc).
 
-Theres even more... There are environment variables and preload scripts that allow you to create complex wrapper methods for your automation script meaning it is even easier and faster and more convenient to write. Since this app has an integrated file system you can store your automation code in multiple files, perhaps corresponding to each of your projects and have different environment variables and preload scripts for each.
+<!-- Theres even more... There are environment variables and preload scripts that allow you to create complex wrapper methods for your automation script meaning it is even easier and faster and more convenient to write. Since this app has an integrated file system you can store your automation code in multiple files, perhaps corresponding to each of your projects and have different environment variables and preload scripts for each.
 
 There is even more... Any data can be extraced from the page and added to the "log" object. The log object is a POJO (Plain Old Javascript Object) that is in scope all the time. Just add properties to it as you like and they will be visible in the out put window. Perfect for Web Scraping!
 
-There is even more...You can use the "require()" function in any of your scripts and it will look for a node_modules folder at the top level of the currently open folder. So you can create complex scripts. Why not look up the data for the current user in the database using the script, then log it to the output window WHILE you are browsing, so you have all the data you need to debug any problems with your site!
+There is even more...You can use the "require()" function in any of your scripts and it will look for a node_modules folder at the top level of the currently open folder. So you can create complex scripts. Why not look up the data for the current user in the database using the script, then log it to the output window WHILE you are browsing, so you have all the data you need to debug any problems with your site! -->
 
-Even if you have 100% automated test coverage you can never get around the need to manually test. What do you do when you are in the process of building a new feature? No test exists yet! What if you have to triage bugs?
+Even if you have 100% automated test coverage you can never get around the need to manually test. What do you do when you are in the process of building a new feature? No test exists yet! What if you have to triage bugs? This app **will** save you countless hours!
 
 _Puppet Master is a desktop app built with Electron and React._
