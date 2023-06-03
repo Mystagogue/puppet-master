@@ -5,6 +5,16 @@
 
 Puppet Master combines browser automation with regular surfing! You can **use** the browser while automating it - and it makes doing that super easy! Never underestimate the value of convenience. Perfect for manual testing, webscraping and power users.
 
+Download the APP now!
+
+[MacOS M1 arm64](https://github.com/Mystagogue/puppet-master/releases/download/v1.0.0-beta1/Puppet.Master-1.0.0-beta1-arm64.dmg)
+
+[MacOS Intel x64](https://github.com/Mystagogue/puppet-master/releases/download/v1.0.0-beta1/Puppet.Master-1.0.0-beta1-x64.dmg)
+
+[Windows Portable](https://github.com/Mystagogue/puppet-master/releases/download/v1.0.0-beta1/Puppet.Master.1.0.0-beta1-win-portable.zip)
+
+Note: The MacOS apps are code-signed, the windows app is not and you will need to allow it to run. The production version will be.
+
 <p align="center">
   <img src="./images/firstScreen.png" alt="Puppet Master Interface" width="1000px"/>
 </p>
