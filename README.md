@@ -51,7 +51,7 @@ For example when I use the code to log into a website, I use node mudules to rea
 
 The log can be read inside the output window. The output window can be activated by clicking the icon in the side nave menu. You can drag the edge to make it larger or smaller (the same is true for any section fo the app). -->
 
-There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension _.env.js will become an environment variable file and any file you name with _.preload.js will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
+There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension **\*.env.js** will become an environment variable file and any file you name with **\*.preload.js** will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
 
 <p align="center">
   <img src="./images/settingsPage.png" alt="Multiple Browsers" width="700px"/>
