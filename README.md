@@ -31,7 +31,7 @@ This really takes the hassle out of writing automations. Unlike regular test aut
 
 Theres even more... you can open any file you like to store your code, its just a regular file system like a code editor. Importantly you can run **npm init** on the directory and add node modules. Then when you use **require()** in the input code it will look inside the node_modules folder at the top level of the directory you opened! This code is running in a virtual machine inside a node child process so you have access to all the standard node modules as well as any modules you install. The file navigator hides the node_modules directory but it will show you the package.json. Do this with as many directories as you like to organise stuff. You have the full breadth of node packages at your disposal. You even have access to the file system - scrape a bunch of data from the web and save it to a file! Save it in the directory you have open and you will see it appear and you can view it in the code editor!
 
-Add an SQL library, query the database for whatever user the code is logging in as an add that data to the _log_ object to show it in the output window.
+Add a fetch library, query the API for whatever data the you want and log it to the otuput window using the log object. I like to add an SQL package and read the user data from the database when I log in to a site so I can see if everything is as expected!
 
 <p align="center">
   <img src="./images/fetchImage.png" alt="Multiple Browsers" width="700px"/>
@@ -65,6 +65,8 @@ There is even more... Any data can be extraced from the page and added to the "l
 
 There is even more...You can use the "require()" function in any of your scripts and it will look for a node_modules folder at the top level of the currently open folder. So you can create complex scripts. Why not look up the data for the current user in the database using the script, then log it to the output window WHILE you are browsing, so you have all the data you need to debug any problems with your site! -->
 
-Even if you have 100% automated test coverage you can never get around the need to manually test. What do you do when you are in the process of building a new feature? No test exists yet! What if you have to triage bugs? This app **will** save you countless hours!
+So how do you use the app? When you install the app open any directory on your file system and start creating code files! Using the right click will display a context menu. The contents of the menu depends which section fo the app you click on. In the file tree it will give you CRUD options. Hoevering the code editor it will give you options to execute code.
+
+Why use this app instead of the 1,000,000 other ways of doing this kind of thing? Convenience. There is nothing with the same speed to power ratio as this. You can write powerful code quickly. Even if you have 100% automated test coverage you can never get around the need to manually test. What do you do when you are in the process of building a new feature? No test exists yet! What if you have to triage bugs? This app **will** save you countless hours!
 
 _Puppet Master is a desktop app built with Electron and React._
