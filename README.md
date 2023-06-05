@@ -64,7 +64,7 @@ The log can be read inside the output window. The output window can be activated
 There is even more than that... you can add environment variables and preload scripts as well. Any file you name with the extension **\*.env.js** will become an environment variable file and any file you name with **\*.preload.js** will become a preload script. You can then select them in the settings panel. The difference between the two is only 1 environment file can be selected at a time but you can select as many preload scripts as you like.
 
 <p align="center">
-  <img src="./images/settingsPage.png" alt="Multiple Browsers" width="700px"/>
+  <img src="./images/settingsPage.png" alt="Multiple Browsers" width="500px"/>
 </p>
 
 When the user input code is executed what happens is first the environment variables are executed, then each preload script in turn, then the current code file (or selected code) inside an async wrapper. The input code will then have access to everything added to scope in the environment and preload scripts. You can use these to create simplified methods for your input code. For example have a websiteX.preload.js and add a loginToWebsteX method. Then when writing other scripts you have a one line method to use. This way even non technical assets can read and use your code (when I say assets here I mean other human beings ar your company! The project managers, the QA's etc).
