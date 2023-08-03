@@ -13,6 +13,9 @@ Download the APP now!
 
 [Windows Portable](https://github.com/Mystagogue/puppet-master/releases/download/v1.0.0-beta1/Puppet.Master.1.0.0-beta1-win-portable.zip)
 
+[NEW! Beta 2 Windows Portable](https://github.com/Mystagogue/puppet-master/releases/download/v1.0.0-beta2/Puppet.Master.1.0.0-beta2.zip)
+
+
 **Note:** The MacOS apps are code-signed, the Windows app is not and you will need to allow it to run. This application is still in Beta testing. Feedback is the most important thing in software development! So please do feel free to give any kind of feedback you like, bugs, feature requests, insults, anything!
 
 <p align="center">
